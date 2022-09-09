@@ -1,0 +1,78 @@
+*{font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif}
+.input-group{width: 50% !important;}
+.btn{width: 120px;}
+#validateloanAmount,
+#validateAnnualIncome,
+#validateCurrentAmount,
+#validateLoanRepymentPeriod,
+#validateCreditHistory,
+#validateLDD,
+      
+#validateLLCD,
+#validateAcctType{color: red;}
+.row{
+  
+    img{ width: 100%;}
+}
+.container{
+
+    width: 60%;
+}
+
+#validateLoanRepymentPeriod{width: 500px;}
+
+.banner{background-color: rgb(170, 160, 160);
+
+  button{width: 100%; height: 40px; background-color: rgb(8, 92, 64); border: 5px solid  rgb(57, 116, 96); border-radius: 9px; color: white;
+
+&:hover{
+    background-color: rgb(8, 43, 31);
+transition: all ease-in 500ms;
+}}
+    .form-select{background-color: rgb(255, 254, 253);}
+input{background-color: rgb(255, 254, 253);}}
+
+
+//
+.modal {
+    display: hide; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+   
+button{ width: 40px;}
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: rgb(240, 229, 229);
+    margin: auto;
+    padding: 60px;
+    border: 1px solid #888;
+    width: 80%;
+    #popupItem {text-align: center; text-transform: capitalize;}
+    button{ width: 50%; text-align: center;margin: auto;height: 40px; }
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: rgb(255, 15, 15);
+    text-decoration: none;
+    cursor: pointer;
+   
+  }
+  .spinner-border{display: none;}
