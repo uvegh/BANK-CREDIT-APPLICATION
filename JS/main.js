@@ -332,12 +332,12 @@ function OutPut() {
     modal.style.display = "block";
     if (points >= 30 && loanAmount > limit) {
         popupItem.innerHTML = `
-        <h5 style="color:blue; text-align: center;">  Dear ${firstNametxt.value},you have been awarded ₦${limit} with a credit score of ${points} 
+        <p style="color:blue; text-align: center;">  Dear ${firstNametxt.value} you have been awarded ₦${limit} with a credit score of ${points} 
         Due to our loan policy,customers can only get
         45% of their annual income
       Thank you for banking with us.
       CENTE BANK <i class="fa fa-bank" aria-hidden="true"></i>
-      </h5>
+      </p>
       <br> <br>
       <button class="btn btn-primary" id="closeBtn">OKAY</button>
         `
@@ -351,11 +351,11 @@ function OutPut() {
 
     } else if (points >= 30 && loanAmount < limit) {
         popupItem.innerHTML = `
-         <h5 style="color:blue"> Dear ${firstNametxt.value},you have been awarded ₦${loanAmount} with a credit score of ${points} <br>
+         <p style="color:blue"> Dear ${firstNametxt.value} you have been awarded ₦${loanAmount} with a credit score of ${points} <br>
 
          Thank you for banking with us. <br>
          CENTE BANK <i class="fa fa-bank" aria-hidden="true"></i>
-         </h5>
+         </p>
          <br> <br>
          <button class="btn btn-primary fw-bold" id="closeBtn">OKAY</button>
         `
@@ -367,12 +367,12 @@ function OutPut() {
     }
     else if (points < 30) {
         popupItem.innerHTML = `
-       <h5 style="color:red"> Dear ${firstNametxt.value},we are sorry to inform you that your request has been denied <br>due to low credit score of ${points}
+       <p style="color:red"> Dear ${firstNametxt.value} we are sorry to inform you that your request has been denied <br>due to low credit score of ${points}
        
         
        Thank you for banking with us.
        CENTE BANK <i class="fa fa-bank" aria-hidden="true"></i>
-       </h5>
+       </p>
        <br> <br>
        <button class="btn btn-primary" id="closeBtn">OKAY</button>
 
