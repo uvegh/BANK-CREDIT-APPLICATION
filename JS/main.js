@@ -66,27 +66,15 @@ let lastLCDdiff;
 
 
 submitBtn.addEventListener("click", function () {
-
+    
     ValidateForms();
 
 
 
 });
 
-// function loader() {
-//     let spinner = document.getElementById("spinner");
-//     show = function () {
-//         setTimeout(() => {
-//             spinner.style.display = "block";
-//         }, 5000);
-//     }
-//     hide = function () {
-//         spinner.style.display = "none"
-//         show()
-//     }
-//     ValidateForms();
-// }
 
+   
 
 
 
@@ -163,6 +151,10 @@ function ValidateForms() {
     }
 
     if (annualIncomeTxt.value != "" && currentAmountTxt.value != "" && creditHistoryTxt.value != "" && lastDepositDateTxt.value != "" && lastLoanCollectionDateTxt.value != "" && loanRepaymentPeriodTxt.value != "" && AccountTypeTxt.value != "" && loanAmountTxt.value != "") {
+         show() ;
+  
+          
+           
         AssignValues()
         console.log(annualIncomeTxt.value, currentAmountTxt.value, creditHistoryTxt.value,
             lastDepositDateTxt.value, lastLoanCollectionDateTxt.value, loanRepaymentPeriodTxt.value,
@@ -173,6 +165,12 @@ function ValidateForms() {
 
 }
 
+function show() {
+  
+    $("#spinner").show().delay(5000).fadeOut();
+submitBtn.innerHTML="Loading.."
+    AssignValues()
+  }
 function AssignValues() {
     loanAmount = parseInt(loanAmountTxt.value)
     annualIncome = parseInt(annualIncomeTxt.value)
@@ -332,7 +330,7 @@ function OutPut() {
     modal.style.display = "block";
     if (points >= 30 && loanAmount > limit) {
         popupItem.innerHTML = `
-        <p style="color:blue; text-align: center;">  Dear ${firstNametxt.value} you have been awarded ₦${limit} with a credit score of ${points} 
+        <p style="color:blue; text-align: center;background: linear-gradient(to right, #283E51, #4B79A1)">  Dear ${firstNametxt.value} you have been awarded ₦${limit} with a credit score of ${points} 
         Due to our loan policy,customers can only get
         45% of their annual income
       Thank you for banking with us.
@@ -351,7 +349,7 @@ function OutPut() {
 
     } else if (points >= 30 && loanAmount < limit) {
         popupItem.innerHTML = `
-         <p style="color:blue"> Dear ${firstNametxt.value} you have been awarded ₦${loanAmount} with a credit score of ${points} <br>
+         <p style="color:blue;background: linear-gradient(to right, #283E51, #4B79A1)"> Dear ${firstNametxt.value} you have been awarded ₦${loanAmount} with a credit score of ${points} <br>
 
          Thank you for banking with us. <br>
          CENTE BANK <i class="fa fa-bank" aria-hidden="true"></i>
@@ -390,7 +388,7 @@ function OutPut() {
     // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
         modal.style.display = "none";
-        clearForm()
+         clearForm()
     }
 
     // When the user clicks anywhere outside of the modal, close it
@@ -400,6 +398,8 @@ function OutPut() {
             clearForm()
         }
     }
+    submitBtn.innerHTML="Send Request"
     points = 0;
 }
+
 
